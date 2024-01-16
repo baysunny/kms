@@ -1,13 +1,13 @@
 <x-layout>
 	<a href="/dashboard/patients/create" class="btn btn-primary"><i class="fa fa-plus"></i> Add Patient</a>
-	@if(count($patients)!=0)
+	
 	<form action="/dashboard/patients">
 		<div class="input-group my-3">
 		  <button class="btn btn-primary" type="submit" id="button-addon1"><i class="fa fa-search"></i></button>
-		  <input name="search" type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1">
+		  <input name="search" type="text" value="{{request('search')}}" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1">
 		</div>
 	</form>
-	
+	@if(count($patients)!=0)
 	<table class="table table-default">
 	  <thead>
 	    <tr>

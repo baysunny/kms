@@ -86,8 +86,7 @@ class PatientController extends Controller
             ]);
             
             $patient->update($formFields);
-
-            return back()->with('message', 'Patient updated successfully!');
+            return redirect('/dashboard/patients')->with('message', 'Patient updated successfully');
         }else{
             return redirect('/login')->with('error', 'You need to login');         
         }
