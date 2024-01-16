@@ -20,7 +20,7 @@ class AppointmentFactory extends Factory
             'patient_id' => $this->faker->name(),
             'schedule' => $this->faker->date(),
             'note' => $this->faker->sentence(),
-            
+            'status' => 'waiting',
         ];  
     }
 }

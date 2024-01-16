@@ -35,7 +35,7 @@
 	      <th scope="col">Date/Schedule</th>
 	      <th scope="col">Status</th>
 	      <th scope="col">Note</th>
-	      <th scope="col" colspan="3" class="text-center">Actions</th>
+	      <th scope="col">Actions</th>
 	    </tr>
 	  </thead>
 	  <tbody>
@@ -53,7 +53,7 @@
                 <button type="submit" class="btn btn-sm btn-link text-danger">Cancel</button>
             </form>
           </td>
-	      <td>
+	      <!-- <td>
 			<form method="POST" action="/dashboard/appointments/{{$appointment->id}}" class="d-flex">
                 @csrf
                 @method('DELETE')
@@ -66,7 +66,7 @@
                 @method('DELETE')
                 <button type="submit" class="btn btn-sm btn-link text-warning">No show</button>
             </form>
-          </td>
+          </td> -->
 	    </tr>
 		@endforeach
 	  </tbody>

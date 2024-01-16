@@ -41,9 +41,9 @@
 
             @media (min-width: 120px) {
                 .appointment-table th:nth-last-child(3),
-                .appointment-table td:nth-last-child(5),
+                .appointment-table td:nth-last-child(3),
                 .appointment-table th:nth-last-child(2),
-                .appointment-table td:nth-last-child(4){
+                .appointment-table td:nth-last-child(2){
                     display: none;
                 }
             }
@@ -59,15 +59,15 @@
 
             @media (min-width: 720px) {
                 .appointment-table th:nth-last-child(3),
-                .appointment-table td:nth-last-child(5){
+                .appointment-table td:nth-last-child(3){
                     display: table-cell;
                 }
                 
 
                 .appointment-table th:last-child {
-                    width: 30%;
+                    width: 10%;
                 }
-                .appointment-table td:nth-last-child(-n+3) {
+                .appointment-table td:last-child {
                     width: 10%;
                 }
 
@@ -78,7 +78,7 @@
 
             @media (min-width: 1080px) {
                 .appointment-table th:nth-last-child(2),
-                .appointment-table td:nth-last-child(4){
+                .appointment-table td:nth-last-child(2){
                     display: table-cell;
                 }
                 

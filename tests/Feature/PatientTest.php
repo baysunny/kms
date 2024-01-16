@@ -63,12 +63,10 @@ class PatientTest extends TestCase
         $this->actingAs($user);
 
         $searchTerm = 'dr';
-        $patients = Patient::factory(10)->create([
-            'name' => $searchTerm . fake()->name
+        Patient::factory(10)->create([
+            'name' => $searchTerm . fake()->name()
         ]);
-        $found = false;
-        $response = $this->get('/dashboard/patients?search=$searchTerm');
-
+        $response = $this->get('/dashboard/patients?search='.$searchTerm);
         $response->assertStatus(200);
         
         $response->assertSee($searchTerm);
