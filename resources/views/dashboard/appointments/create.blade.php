@@ -37,7 +37,6 @@
         <select class="form-select" id="floatingStatus" name="status">
             <option value="waiting">Waiting</option>
             <option value="canceled">Canceled</option>
-            <option value="showup">Show up</option>
         </select>
         <label for="floatingStatus">Status</label>
     </div>
