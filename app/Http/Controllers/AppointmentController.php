@@ -43,7 +43,7 @@ class AppointmentController extends Controller
         ]);
     }
 
-    public function store(Request $request, Appointment $appointment)
+    public function store(Request $request)
     {
         if (auth()->check()) {
             $formFields = $request->validate([

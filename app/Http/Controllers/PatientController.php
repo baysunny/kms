@@ -10,8 +10,7 @@ use PDF;
 class PatientController extends Controller
 {
     public function export_pdf(Patient $patient){
-        $appointments = Appointment::leftjoin('patients', 'patients.id', '=', 'appointments.patient_id')
-            ->select('appointments.*', 'patients.name as patient_name')
+        $appointments = Appointment::where('patient_id', '=', $patient->id)
             ->latest()
             ->get();
         $pdf = PDF::loadView('pdf.patient-appointments', [
