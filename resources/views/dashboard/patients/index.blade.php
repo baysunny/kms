@@ -38,7 +38,7 @@
 			<form method="POST" action="/dashboard/patients/{{$patient->id}}" class="d-flex">
                 @csrf
                 @method('DELETE')
-                <button type="submit" class="btn btn-sm btn-link text-danger">Delete</button>
+                <button type="submit" class="btn btn-sm btn-link text-danger" onclick="submitForm(this);">Delete</button>
             </form>
            </td>
 	    </tr>

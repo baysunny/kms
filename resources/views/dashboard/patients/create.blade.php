@@ -51,7 +51,7 @@
         <label for="floatingContact">Contact</label>
     </div>
 
-    <button type="submit" class="btn btn-primary">Add</button>
+    <button type="submit" class="btn btn-primary" onclick="submitForm(this);">Add</button>
 </form>
 
 </x-layout>

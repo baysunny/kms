@@ -38,7 +38,7 @@
 			<form method="POST" action="/dashboard/appointments/{{$appointment->id}}" class="d-flex">
                 @csrf
                 @method('PUT')
-                <button type="submit" class="btn btn-sm btn-link text-danger">Cancel</button>
+                <button type="submit" class="btn btn-sm btn-link text-danger" onclick="submitForm(this);">Cancel</button>
             </form>
           </td>
 	      <!-- <td>
