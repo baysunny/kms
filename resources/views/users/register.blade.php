@@ -44,7 +44,7 @@
             </div>
 
             <div class="mb-3">
-                <button type="submit" class="btn btn-primary">Sign Up</button>
+                <button type="submit" class="btn btn-primary" onclick="submitForm(this);">Sign Up</button>
             </div>
 
             <div class="mt-3">

@@ -107,10 +107,10 @@
                     <a class="nav-link{{ Request::is('dashboard') ? ' active text-primary' : '' }}" href="/dashboard"><i class="fa fa-home"></i> Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link{{ Request::is('dashboard/patients') ? ' active text-primary' : '' }}" href="/dashboard/patients"><i class="fa fa-users"></i> Patients</a>
+                    <a class="nav-link{{ Request::is('dashboard/patients*') ? ' active text-primary' : '' }}" href="/dashboard/patients"><i class="fa fa-users"></i> Patients</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link{{ Request::is('dashboard/appointments') ? ' active text-primary' : '' }}" href="/dashboard/appointments"><i class="fa fa-calendar"></i> Appointments</a>
+                    <a class="nav-link{{ Request::is('dashboard/appointments*') ? ' active text-primary' : '' }}" href="/dashboard/appointments"><i class="fa fa-calendar"></i> Appointments</a>
                 </li>
               </ul>
               <ul class="navbar-nav ml-auto">

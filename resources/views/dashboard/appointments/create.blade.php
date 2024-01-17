@@ -3,22 +3,6 @@
     <form action="/dashboard/appointments" class="form-floating mt-4" method="POST">
     @csrf
 
-    @error('patient_id')
-        <div class="alert alert-danger">{{ $message }}</div>
-    @enderror
-
-    @error('schedule')
-        <div class="alert alert-danger">{{ $message }}</div>
-    @enderror
-
-    @error('status')
-        <div class="alert alert-danger">{{ $message }}</div>
-    @enderror
-
-    @error('note')
-        <div class="alert alert-danger">{{ $message }}</div>
-    @enderror
-
     <div class="form-floating mb-3">
         <select class="form-select" id="floatingName" name="patient_id">
             @foreach($patients as $patient)
@@ -26,11 +10,17 @@
             @endforeach
         </select>
         <label for="floatingName">Patient Name</label>
+        @error('patient_id')
+        <p class="text-danger px-1"><i class="fa fa-exclamation-triangle"></i> {{ $message }}</p>
+        @enderror
     </div>
 
     <div class="form-floating mb-3">
         <input type="text" class="form-control" id="floatingDateOfBirth" name="schedule" value="{{old('schedule')}}">
         <label for="floatingDateOfBirth">Schedule</label>
+        @error('schedule')
+        <p class="text-danger px-1"><i class="fa fa-exclamation-triangle"></i> {{ $message }}</p>
+        @enderror
     </div>
 
     <div class="form-floating mb-3">
@@ -39,12 +29,17 @@
             <option value="canceled">Canceled</option>
         </select>
         <label for="floatingStatus">Status</label>
+        @error('status')
+        <p class="text-danger px-1"><i class="fa fa-exclamation-triangle"></i> {{ $message }}</p>
+        @enderror
     </div>
 
     <div class="form-floating mb-3">
         <textarea class="form-control" name="note" style="min-height: 5.5rem" placeholder="{{old('note')}}" id="floatingNote">{{old('note')}}</textarea>
-
         <label for="floatingNote">Note</label>
+        @error('note')
+        <p class="text-danger px-1"><i class="fa fa-exclamation-triangle"></i> {{ $message }}</p>
+        @enderror
     </div>
 
     <button type="submit" class="btn btn-primary" onclick="submitForm(this);">Add</button>
